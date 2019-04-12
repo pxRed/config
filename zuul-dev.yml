@@ -1,23 +1,21 @@
 server:
   port: 8093
-
 spring:
   application:
     name: zuul
-#设置eureka 注册中心地址
+#璁剧疆eureka 娉ㄥ唽涓績鍦板潃
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8081/eureka/
-
   instance:
     prefer-ip-address: true
 zuul:
   routes:
     client-a:
-      #访问路径
+      #璁块棶璺緞
       path: /app-a/**
-      #服务注册ID
+      #鏈嶅姟娉ㄥ唽ID
       serviceId: order
     client-b:
       path: /app-b/**
